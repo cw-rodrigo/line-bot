@@ -13,8 +13,6 @@ void setup() {
   pinMode(LED_INDICADOR_LIGADO, OUTPUT);
   pinMode(LED_INDICADOR_DESLIGADO, OUTPUT);
   pinMode(LED_INDICADOR_BOTAO_PRESSIONADO, OUTPUT);
-
-  digitalWrite(MOTOR, HIGH);
 }
 
 void loop() { 
@@ -41,12 +39,13 @@ void loop() {
 
   if (ligar) {
     digitalWrite(LED_INDICADOR_DESLIGADO, LOW);
+    digitalWrite(MOTOR, HIGH);
     
     piscar_led(0.1);
     
-  } else {
+  } else
     digitalWrite(LED_INDICADOR_LIGADO, LOW);
-  }
+    digitalWrite(MOTOR, LOW);
 }
 
 void piscar_led(float intervalo) {
