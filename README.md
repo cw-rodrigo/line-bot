@@ -1,2 +1,2 @@
-# Line-Bot
-robotic project
+# line-bot
+Just a Arduino test project.
